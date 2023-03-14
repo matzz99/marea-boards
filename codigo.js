@@ -1,3 +1,6 @@
+
+//en estas primeras lineas de codigo declaro variables y funciones que voy a aplicar depues
+//las pongo al principio por una cuestion de organizacion
 let total = 0;
 let cuotas = 0;
 function calcularCuotas (cantidadCuotas){
@@ -7,11 +10,15 @@ function calcularCuotas (cantidadCuotas){
 
 
 
+//doy la bienvenida al usuario y cargo su nombre por simple formalidad
 let nombreUsuario = prompt ("Esto es Marea Boards.\nAca vas a poder armar tu tabla con el mejor estilo\n¿Como te llamas?");
 alert ("Bienvenido "+nombreUsuario);
 
 
 
+
+//aca muestro la lista de productos y pregunto si se quiere seguir comprando. A la vez voy acumulando el total
+//de los productos que se van comprando
 let ingreso = prompt ("Si queres ver la lista de componentes que tenemos en stock, presiona s-(si) o sino n-(no");
 while (ingreso == "s"){
     let tabla = parseInt(prompt("Ingresa el numero de componente que desees\n1-Tabla Cruising $10.000\n2-Tabla Freeriding $12.500\n3-Trucks LAB 150mm $15.350\n4-Trucks KALIMA 180mm $17.200\n5-Rulemanes Element $4.500\n6-Separadores $2.000"));
@@ -48,6 +55,10 @@ while (ingreso == "s"){
 }
 
 alert('Llevas gastado hasta ahora '+total);
+
+
+
+//ACA DECLARO QUE SI EL MONTO TOTAL ES MAYOR A CERO, ENTONCES QUE SE EJECUTE EL CALCULADOR DE CUOTAS
 if(total != 0){
 let preCuotas = prompt ("El precio anterior es pagando mediante efectivo o trasnferencia. En el caso de que quieras pagar con tarjeta, te podemos ofrecer 3 o 6 cuotas con un recargo del 10%. Si queres abonar mediante tarjeta y calcular el recargo en 3 o 6 cuotas presiona s-(si), en caso contrario presiona n-(no)");
 while (preCuotas == "s"){
